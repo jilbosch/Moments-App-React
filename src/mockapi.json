@@ -1,0 +1,50 @@
+[
+    {
+      "title": "Paisatge nevat",
+      "descripcion": "imatge d'un paisatge nevat ",
+      "imgUrl": "https://www.shbarcelona.cat/blog/cat/wp-content/uploads/2019/01/INVIERNO-810x540.jpg",
+      "id": "1"
+    },
+    {
+      "title": "CinqueTerre",
+      "descripcion": "",
+      "imgUrl": "https://promoviatgesblog.files.wordpress.com/2019/10/3-2.png",
+      "id": "2"
+    },
+    {
+      "title": "Mont Fuji Japó",
+      "descripcion": "La imatge més icònica del Japó és sens dubte el mont Fuji, la muntanya sagrada més venerada pels japonesos. Aquest volcà està inactiu des de 1708 i compta amb més de 2.400 metres d’alçada, amb una bonica capa de neu al cim. Per molts volcans que hagis vist abans, t’assegurem que quan vegis el mont Fuji sabràs que no havies vist mai res igual. A més de ser una de les imatges més fotografiades del país, compta amb un gran component espiritual gràcies als santuaris budistes, arcs torii i altres elements de la cultura nipona que l’envolten. Antigament, els samurais realitzaven els seus entrenaments al peu del mont Fuji per canalitzar la força que els transmetia la muntanya. Si vols captar una de les fotografies més boniques del volcà, hauràs d’anar fins al llac Ashee i captar el mont Fuji de fons. Espectacular!",
+      "imgUrl": "https://promoviatgesblog.files.wordpress.com/2019/10/2-2.png",
+      "id": "3"
+    },
+    {
+      "title": "title 4",
+      "descripcion": "descripcion 4",
+      "imgUrl": "imgUrl 4",
+      "id": "4"
+    },
+    {
+      "title": "title 5",
+      "descripcion": "descripcion 5",
+      "imgUrl": "imgUrl 5",
+      "id": "5"
+    },
+    {
+      "title": "title 6",
+      "descripcion": "descripcion 6",
+      "imgUrl": "imgUrl 6",
+      "id": "6"
+    },
+    {
+      "title": "title 7",
+      "descripcion": "descripcion 7",
+      "imgUrl": "imgUrl 7",
+      "id": "7"
+    },
+    {
+      "title": "title 8",
+      "descripcion": "descripcion 8",
+      "imgUrl": "imgUrl 8",
+      "id": "8"
+    }
+  ]
