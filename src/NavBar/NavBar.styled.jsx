@@ -22,7 +22,7 @@ width: 100%;
 export const Logo = styled.img `
 display:flex;
 vertical-align: middle;
-width: 20%;
+width: 15%;
 `;
 
 export const ContainerButtons = styled.div`
@@ -31,7 +31,7 @@ align-items: center;
 justify-content:space-between; 
 max-width: 1600px;  
 margin-right: 5%;
-width:30%;
+width:20%;
 `
 export const Button1 = styled.button`
 background-color: #903095;

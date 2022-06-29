@@ -1,9 +1,10 @@
+
 import styled from "styled-components";
 export const ContainerMoments = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding-top: 6%;
-  width: 99.8%;
+  width: 90%;
   justify-content: center;
 `;
 
@@ -11,12 +12,20 @@ export const ImageBox = styled.div`
   display: flex;
   width: 20%;
   flex-direction: column;
-  margin: 1%;
+  margin: 9%;
   margin-left: 3%;
   margin-bottom: 2%;
 `;
 export const TextContainer = styled.div``;
-export const MovieBtn = styled.button``;
+export const MovieBtn = styled.div`
+position: absolute;
+color: white;
+display:flex;
+justify-content: space-around;
+align-items:center;
+top:95%;
+left:45%;
+`;
 export const ImgCont = styled.div`
   height: 90%;
   position: relative;
@@ -36,5 +45,7 @@ export const ImageImg = styled.img`
 `;
 
 export const ImageTitle = styled.h2`
-color: white
-`
+color: white`;
+
+  
+
