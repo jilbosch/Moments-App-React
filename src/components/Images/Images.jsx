@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { momentsServices } from "../../services/momentsServices";
 import {
   ContainerMoments,
+  Icon,
+  Icons,
   ImageBox,
   ImageImg,
   ImageTitle,
@@ -14,39 +16,45 @@ import {
 } from "./Images.styled";
 
 function Images() {
-  const [moments, setMoments] = useState([]);
+  const [moments, setMoments] = useState([])
   useEffect(() => {
     getAllMoments();
-  });
+  },[]);
+  const ellipse = (element) => {
+    if (element.length > 20) {
+      element = element.substr(0, 20) + "...";
+    } return element
+  };
   const getAllMoments = () => {
     momentsServices.getAllMoments().then((res) => {
-      setMoments(res);
+      if (res)setMoments(res);
+      console.log(res);
     });
   };
+  console.log(moments);
   return (
     <ContainerMoments>
-      {moments.map((moment, key) => (
+      {moments ? moments.map((moment, key) => (
         <ImageBox key={key}>
           <ImgCont>
             <Link to={`/Image/${moment.id}`}>
-              <i className="fa-light fa-x"></i>
-              
+              <Icon>< i className="fa-light fa-x"></i></Icon>
               <ImageImg src={moment.imgUrl} alt="imatge" />
               <MovieBtn>
-              <i className="fa-solid fa-star"></i>
-              <i className="fa-solid fa-trash"></i>
-                <i className="fa-solid fa-eye"></i>
-                <i className="fa-solid fa-pen-to-square"></i>
-                <i className="fa-solid fa-trash-can"></i>
+              <Icons><i className="fa-solid fa-star"></i></Icons>
+              <Icons><i className="fa-solid fa-trash"></i></Icons>
+                <Icons><i className="fa-solid fa-eye"></i></Icons>
+                <Icons><i className="fa-solid fa-pen-to-square"></i></Icons>
+                <Icons><i className="fa-solid fa-trash-can"></i></Icons>
               </MovieBtn>
             </Link>
           </ImgCont>
           <TextContainer>
             <ImageTitle>{moment.title}</ImageTitle>
-            <ImageTitle>{moment.descripcion}</ImageTitle>
+            <ImageTitle>{ellipse(moment.descripcion)}</ImageTitle> 
           </TextContainer>
         </ImageBox>
-      ))}
+      )):null}
     </ContainerMoments>
   );
 }

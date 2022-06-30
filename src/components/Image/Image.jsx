@@ -1,19 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import {Button} from '@mui/material';
+import { momentsServices } from "../../services/momentsServices";
 
-function Image () {
+export default function Image () {
+
+const [moments, setMoments] = useState ({});
+const {id} = useParams ();
+
+useEffect (()=>{
+    momentId(id);
+},[id])
+
+const momentId = (id) => {
+    momentsServices.getMomentsById(id). then (res =>{
+        setMoments (res)
+    } 
+    )}
+    return (
 
 <PageContainer> 
 <Link to="/"><Button>atras</Button></Link>
     <ImageInfo>
         <TextContainer>
-            <img src={moment.imgUrl} alt={moment.title} />
+            <img src={moments.imgUrl} alt={moments.title} />
         </TextContainer>
         <ImageContainer>
-            <h1>{moment.title}</h1>
-            <h2>{moment.description}</h2>
+            <h1>{moments.title}</h1>
+            <h2>{moments.description}</h2>
         </ImageContainer>
     </ImageInfo>
-</PageContainer>}
+</PageContainer>)}
 
-export default Image

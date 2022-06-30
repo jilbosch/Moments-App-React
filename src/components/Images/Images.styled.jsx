@@ -16,15 +16,18 @@ export const ImageBox = styled.div`
   margin-left: 3%;
   margin-bottom: 2%;
 `;
-export const TextContainer = styled.div``;
+export const TextContainer = styled.div`
+`;
+
 export const MovieBtn = styled.div`
 position: absolute;
 color: white;
 display:flex;
 justify-content: space-around;
 align-items:center;
-top:95%;
-left:45%;
+top:90%;
+left:5%;
+font-size: 30px;
 `;
 export const ImgCont = styled.div`
   height: 90%;
@@ -45,7 +48,22 @@ export const ImageImg = styled.img`
 `;
 
 export const ImageTitle = styled.h2`
-color: white`;
+color: white;
+`;
+
+ 
+export const Icons = styled.div`
+margin: 10px;
+
+`;;
+export  const Icon = styled.div `
+position: absolute;
+color:white;
+top:5%;
+left:70%;
+font-size: 30px;
+
+`
 
   
 
