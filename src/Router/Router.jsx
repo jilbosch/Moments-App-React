@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import App from "../App";
-import Image from "../components/Images/Images";
+import Image from "../components/Image/Image";
 
 export default function Router () {
 

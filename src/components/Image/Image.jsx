@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import {Button} from '@mui/material';
+import { Button } from "@mui/material";
 import { momentsServices } from "../../services/momentsServices";
+import{ PageContainer, ImageInfo, TextContainer, ImageContainer} from "../Image/Image.styled";
 
 export default function Image () {
 
