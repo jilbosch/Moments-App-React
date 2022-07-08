@@ -15,7 +15,7 @@ import {
   TextContainer,
 } from "./Images.styled";
 
-function Images() {
+function Images(props) {
   const [moments, setMoments] = useState([])
   useEffect(() => {
     getAllMoments();
@@ -28,10 +28,8 @@ function Images() {
   const getAllMoments = () => {
     momentsServices.getAllMoments().then((res) => {
       if (res)setMoments(res);
-      console.log(res);
     });
   };
-  console.log(moments);
   return (
     <ContainerMoments>
       {moments ? moments.map((moment, key) => (
@@ -39,7 +37,7 @@ function Images() {
           <ImgCont>
             <Link to={`/Image/${moment.id}`}>
               <Icon>< i className="fa-light fa-x"></i></Icon>
-              <ImageImg src={moment.imgUrl} alt="imatge" />
+              <ImageImg src={moment.img_Url} alt="imatge" />
               <MovieBtn>
               <Icons><i className="fa-solid fa-star"></i></Icons>
               <Icons><i className="fa-solid fa-trash"></i></Icons>

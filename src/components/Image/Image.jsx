@@ -6,16 +6,16 @@ import{ PageContainer, ImageInfo, TextContainer, ImageContainer} from "../Image/
 
 export default function Image () {
 
-const [moments, setMoments] = useState ({});
+const [moment, setMoment] = useState ([]);
 const {id} = useParams ();
 
 useEffect (()=>{
     momentId(id);
-},[id])
+},[])
 
 const momentId = (id) => {
     momentsServices.getMomentsById(id). then (res =>{
-        setMoments (res)
+        setMoment (res)
     } 
     )}
     return (
@@ -24,11 +24,11 @@ const momentId = (id) => {
 <Link to="/"><Button>atras</Button></Link>
     <ImageInfo>
         <TextContainer>
-            <img src={moments.imgUrl} alt={moments.title} />
+            <img src={moment.imgUrl} alt={moment.title} />
         </TextContainer>
         <ImageContainer>
-            <h1>{moments.title}</h1>
-            <h2>{moments.description}</h2>
+            <h1>{moment.title}</h1>
+            <h2>{moment.description}</h2>
         </ImageContainer>
     </ImageInfo>
 </PageContainer>)}
