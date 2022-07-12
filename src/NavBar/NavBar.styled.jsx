@@ -63,3 +63,8 @@ top:3%;
 left:90%;
 }
 `;
+
+export const Link = styled.div `
+`;
+    
+

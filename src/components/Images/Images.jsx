@@ -11,7 +11,7 @@ import {
   ImageImg,
   ImageTitle,
   ImgCont,
-  MovieBtn,
+  MomentBtn,
   TextContainer,
 } from "./Images.styled";
 
@@ -30,22 +30,32 @@ function Images(props) {
       if (res)setMoments(res);
     });
   };
+
+  const deleteMoments = (id) => {
+    let deleteConfirmed = window.confirm("segur que vols esborrar?");
+    if (!deleteConfirmed) return;
+    let filterMoments =moments.filter((moment) => moment.id !== id);
+    momentsServices.deleteMoments(id).then (res => {
+      if (res.id== id)
+      setMoments(filterMoments);
+    })}
   return (
     <ContainerMoments>
       {moments ? moments.map((moment, key) => (
         <ImageBox key={key}>
           <ImgCont>
-            <Link to={`/Image/${moment.id}`}>
               <Icon>< i className="fa-light fa-x"></i></Icon>
               <ImageImg src={moment.img_Url} alt="imatge" />
-              <MovieBtn>
+              <MomentBtn>
               <Icons><i className="fa-solid fa-star"></i></Icons>
-              <Icons><i className="fa-solid fa-trash"></i></Icons>
+              <Link to={`/Image/${moment.id}`}>
                 <Icons><i className="fa-solid fa-eye"></i></Icons>
+                </Link>
+                <Link to={`/Form/`}>
                 <Icons><i className="fa-solid fa-pen-to-square"></i></Icons>
-                <Icons><i className="fa-solid fa-trash-can"></i></Icons>
-              </MovieBtn>
-            </Link>
+                </Link>
+                <Icons onClick={()=>deleteMoments(moment.id) }><i className="fa-solid fa-trash-can"></i></Icons>
+              </MomentBtn>
           </ImgCont>
           <TextContainer>
             <ImageTitle>{moment.title}</ImageTitle>

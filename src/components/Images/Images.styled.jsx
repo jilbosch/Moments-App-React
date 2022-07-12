@@ -27,7 +27,7 @@ export const TextContainer = styled.div`
 }
 `;
 
-export const MovieBtn = styled.div`
+export const MomentBtn = styled.div`
 position: absolute;
 color: white;
 display:flex;
@@ -69,6 +69,9 @@ color: white;
  
 export const Icons = styled.div`
 margin: 8px;
+text-decoration:none;
+color: white;
+
 `;
 export  const Icon = styled.div `
 position: absolute;
@@ -80,8 +83,6 @@ font-size: 30px;
 top:3%;
 left:90%;
 }
-
-
 `
 
   
