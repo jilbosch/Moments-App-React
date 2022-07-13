@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-export function Form (){
+export function Form (props){
 
-const [newMoment,setNewMoment] = useState ({title:"",description:"",img_Url:""})
+const [newMoment,setNewMoment] = useState (props.editedMoment)
 const [editMode,setEditMoment] = useState ({})
 const inputChange = (e) => {
 const name = e.target.name;
@@ -16,6 +16,8 @@ const handleSubmit = (e) => {
 // props.updateMoment(newMoment)
 // resetInputsForm(e)};
 }
+
+
 const resetInputsForm = (e) => {
     e.target.title.value = ""
     e.tareget.description.value=""

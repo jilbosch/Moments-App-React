@@ -11,7 +11,6 @@ return (
         <Routes>
             <Route path="/" element ={<App/>} />
             <Route path="/Image/:id" element = {<Image/>} />
-            <Route path="/Form/" element = {<Form/>}/>
         </Routes>
     </BrowserRouter>
     )

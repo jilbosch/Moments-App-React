@@ -83,7 +83,46 @@ font-size: 30px;
 top:3%;
 left:90%;
 }
+`;
+export const Modal = styled.div `
+position:fixed;
+top:0;
+right:0;
+bottom:0;
+left:0;
+opacity:0;
+pointer-events:none;
+display: flex;
+transition: .5s;`;
+
+
+export const MiModal= styled.div`
+opacity:1;
+pointer-events:auto;`;
+
+export const Modalcontenido = styled.div `
+background-color: white, solid ;
+width:600px;
+padding: 10px 20px;
+/* margin: 20% auto; */
+position: relative;
+animation: show 1s .5s backwards;`;
+
+export const CreateButon = styled.button`
+position:fixed;
+top:6%;
+left:64%;
+width: 70px;
+height:28px;
+background-color: #903095;
+border-radius: 15vw;
+border: none;
+z-index:100;
+display: flex;
+align-items: center;
+@media (max-width:600px){
+margin: 5px;
+top: 5%;
+left:67%;}
 `
-
-  
-
+;
