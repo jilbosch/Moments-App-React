@@ -84,17 +84,6 @@ top:3%;
 left:90%;
 }
 `;
-export const Modal = styled.div `
-position:fixed;
-top:0;
-right:0;
-bottom:0;
-left:0%;
-opacity:0;
-pointer-events:none;
-display: flex;
-transition: .5s;`;
-
 
 export const MiModal= styled.div`
 position:fixed;
@@ -102,7 +91,13 @@ z-index:100;
 top:5%;
 left:20%;
 opacity:1;
-pointer-events:auto;`;
+pointer-events:auto;
+@media(max-width:600px){
+top:10%;
+
+
+  
+}`;
 
 export const Modalcontenido = styled.div `
 background-color: white, solid ;
@@ -110,7 +105,9 @@ width:600px;
 padding: 10px 20px;
 /* margin: 20% auto; */
 position: relative;
-animation: show 1s .5s backwards;`;
+animation: show 1s .5s backwards;
+@media(max-width:600px){
+width:400px;}`;
 
 export const CreateButon = styled.button`
 position:fixed;
