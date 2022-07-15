@@ -89,7 +89,7 @@ position:fixed;
 top:0;
 right:0;
 bottom:0;
-left:0;
+left:0%;
 opacity:0;
 pointer-events:none;
 display: flex;
@@ -97,6 +97,10 @@ transition: .5s;`;
 
 
 export const MiModal= styled.div`
+position:fixed;
+z-index:100;
+top:5%;
+left:20%;
 opacity:1;
 pointer-events:auto;`;
 

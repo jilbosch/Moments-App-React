@@ -12,7 +12,7 @@ export const momentsServices= {
         return moment;
     },
     createMoments (dataMoments) {
-        const moment = Axios.post (baseURL + "/moments/",dataMoments ).then((res) =>res.data);
+        const moment = Axios.post (baseURL + "/moments", dataMoments).then((res) =>res.data);
         return moment;
     }, 
     updateMoments(id,dataMoments){
@@ -22,6 +22,6 @@ export const momentsServices= {
     getMomentsById (id){
       const moment = Axios.get(baseURL + "/moments/"+ id).then((res) => res.data);
         return moment;
-    }
+    },
     
 }

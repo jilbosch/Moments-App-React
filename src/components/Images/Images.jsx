@@ -14,7 +14,6 @@ import {
   ImageTitle,
   ImgCont,
   MiModal,
-  Modal,
   Modalcontenido,
   MomentBtn,
   TextContainer,
@@ -22,12 +21,12 @@ import {
 
 function Images() {
   const [moments, setMoments] = useState([])
+  const [viewform,setViewform] = useState(false)
+  const [editedMoment, setEditedMoment] = useState ({title:"",descripcion:"",img_Url:""})
+  const [editMode,setEditMode] = useState(false)
   useEffect(() => {
     getAllMoments();
   },[]);
-  const [viewform,setViewform] = useState([])
-  const [editedMoment, setEditedMoment] = useState ({title:"",descripcion:"",img_Url:""})
-  const [editMode,setEditMode] = useState([])
   const ellipse = (element) => {
     if (element.length > 20) {
       element = element.substr(0, 20) + "...";
@@ -35,31 +34,43 @@ function Images() {
   };
   const getAllMoments = () => {
     momentsServices.getAllMoments().then((res) => {
-      if (res)setMoments(res);
+    setMoments(res);
     });
   };
-  const addMoment = (data) => {
-    momentsServices.createMoments(data).then (res =>{
+  const resetInputsForm = (e) => {
+    setEditedMoment({
+      title: "",
+      id: "",
+      img_Url: "",
+      descripcion: "",
+    });
+  };
+  const addMoment = (dataMoments) => {
+    momentsServices.createMoments(dataMoments).then ((res) =>{
       setMoments([...moments,res]);
-      openForm();})}
+      });
+    setViewform(false);
+    }
+
 
   const openForm = () => {
     if (viewform) setViewform(false);
     else setViewform(true);
+    resetInputsForm();
     setEditMode(false);}
 
     const editMoment = (id) => {
       openForm();
-      let editedMoment =moments.find((moments) => moments.id === id);
+      let editedMoment =moments.find((moment) => moment.id === id);
       setEditedMoment(editedMoment)
       setEditMode(true)}
     
       const updateMoment = (newMoment) => {
         momentsServices.updateMoments(newMoment.id, newMoment).then((res) => {
-          let momentToEdit = moments.map((moment) =>
+          let editedMoment = moments.map((moment) =>
             moment.id === newMoment.id ? newMoment : moment
           );
-          setMoments(momentToEdit);
+          setMoments(editedMoment);
         });
     
         openForm();
@@ -74,11 +85,10 @@ function Images() {
       setMoments(filterMoments);
     })}
   return (<>
-    <Modal></Modal>
-<MiModal>
-  <Modalcontenido>
+        <MiModal>
+        <Modalcontenido>
     <a href="#"></a>
-    {viewform ? <Form addMoment={addMoment}editedMoment={editedMoment}updateMoment={updateMoment}editMoment={editMoment} /> : ""}
+    {viewform ? <Form addMoment={addMoment}editedMoment={editedMoment}updateMoment={updateMoment}editMode={editMode} /> : ""}
   </Modalcontenido>  
 </MiModal>
     <ContainerMoments>
