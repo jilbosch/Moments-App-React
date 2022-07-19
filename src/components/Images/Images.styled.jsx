@@ -101,7 +101,7 @@ left:90%;
 export const MiModal= styled.div`
 position:fixed;
 z-index:100;
-top:5%;
+top:3%;
 left:20%;
 opacity:1;
 pointer-events:auto;

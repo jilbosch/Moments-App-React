@@ -36,7 +36,7 @@ width: 30%;
 export const ContainerButtons = styled.div`
 display: flex;
 align-items: center;
-justify-content:space-between; 
+justify-content:space-around; 
 max-width: 1600px;  
 margin-right: 5%;
 width:20%;
