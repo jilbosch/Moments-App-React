@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerNav = styled.div`
+background-color: black;
 position: fixed;
 z-index:100;
 display: flex;
@@ -9,6 +10,7 @@ justify-content: space-between;
 max-width: 1600px;  
 margin:0 auto;
 width: 100%;
+opacity: 80%;
 `;
 
 export const DivWrapper = styled.div `
@@ -47,6 +49,7 @@ background-color: #903095;
 border-radius: 50vw;
 padding: 2%;
 border: none;
+opacity: none;
 @media (max-width:600px){
 padding:5%;
 margin: 5px;

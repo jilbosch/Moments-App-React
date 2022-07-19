@@ -2,28 +2,36 @@
 import styled from "styled-components";
 export const ContainerMoments = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 3%;
+  flex-wrap:wrap;
+  padding-top: 10%;
   width: 90%;
-  justify-content: center;
+  /* justify-content:space-evenly; */
+  @media (max-width:600px){
+  padding-top: 20%;
+
+  }
 `;
 
 export const ImageBox = styled.div`
   display: flex;
-  width: 5%;
+  width: 25%;
+  height:20%;
   flex-direction: column;
-  margin: 9%;
-  margin-left: 3%;
-  margin-bottom: 2%;
+  margin: 2% 1.66%;
+  
   @media (max-width:600px){
-    width:90%;
+    width:100%;
     align-items: center;
     justify-content: center};
-    margin-left: 18%;
-    margin-top:15%;`;
+`;
 export const TextContainer = styled.div`
+display: center;
+align-items: center;
+padding: 30px;
+
 @media (max-width:600px){
   padding-top:20px;
+  
 }
 `;
 
@@ -33,16 +41,17 @@ color: white;
 display:flex;
 justify-content: space-around;
 align-items:center;
-top:90%;
-left:50%;
-font-size: 30px;
+top:80%;
+left:26%;
+font-size: 40px;
 @media (max-width:600px){
-top:90%;
-left:10%;
+top:80%;
+left:25%;
 }
 `;
 export const ImgCont = styled.div`
-  height: 90%;
+  width: 100%;
+  height: 100%;
   position: relative;
 @media (max-width:600px){
     grid-template-columns:90%;
@@ -50,8 +59,8 @@ export const ImgCont = styled.div`
 `;
 export const ImageImg = styled.img`
   object-fit: cover;
-  width: 300px;
-  height:500px;
+  width: 100%;
+  height:100%;
   border-radius: 3vw;
   opacity: 1;
   filter: alpha(opacity=100);
@@ -62,9 +71,13 @@ export const ImageImg = styled.img`
   }
 `;
 
-export const ImageTitle = styled.h2`
+export const ImageTitle = styled.h1`
 color: white;
 `;
+
+export const TitleDescripcion =styled.h3  `
+color: white;
+`
 
  
 export const Icons = styled.div`
@@ -76,8 +89,8 @@ color: white;
 export  const Icon = styled.div `
 position: absolute;
 color:white;
-top:3%;
-left:280%;
+top:5%;
+left:90%;
 font-size: 30px;
 @media (max-width:600px){
 top:3%;
@@ -111,19 +124,20 @@ width:400px;}`;
 
 export const CreateButon = styled.button`
 position:fixed;
-top:6%;
-left:64%;
-width: 70px;
-height:28px;
+top:90%;
+left:50%;
+width: 50px;
+height:50px;
 background-color: #903095;
 border-radius: 15vw;
 border: none;
 z-index:100;
 display: flex;
 align-items: center;
+opacity: 80%;
 @media (max-width:600px){
 margin: 5px;
-top: 5%;
-left:67%;}
+top: 95%;
+left:40%;}
 `
 ;

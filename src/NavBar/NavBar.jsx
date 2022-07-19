@@ -8,7 +8,7 @@ function NavBar() {
 
     <ContainerNav>
       
-        <Logo alt="Navbar logo"src="https://i.ibb.co/3WJ2pz2/logo-moments.png"width="93.28358208955224"/>
+        <Logo alt="Navbar logo"src="https://i.ibb.co/qgXk2sm/LogoGran.png"width="93.28358208955224"/>
         <Icon><i className="fa-solid fa-magnifying-glass"></i></Icon>
         <ContainerButtons>
             <Button1>Home</Button1>

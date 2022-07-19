@@ -17,6 +17,7 @@ import {
   Modalcontenido,
   MomentBtn,
   TextContainer,
+  TitleDescripcion,
 } from "./Images.styled";
 
 function Images() {
@@ -109,7 +110,7 @@ function Images() {
           </ImgCont>
           <TextContainer>
             <ImageTitle>{moment.title}</ImageTitle>
-            <ImageTitle>{ellipse(moment.descripcion)}</ImageTitle> 
+            <TitleDescripcion>{ellipse(moment.descripcion)}</TitleDescripcion> 
           </TextContainer>
         </ImageBox>
       )):null}

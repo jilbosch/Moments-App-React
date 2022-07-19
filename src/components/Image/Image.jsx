@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@mui/material";
 import { momentsServices } from "../../services/momentsServices";
-import{ PageContainer, ImageInfo, TextContainer, ImageContainer} from "../Image/Image.styled";
+import{ PageContainer, ImageInfo, TextContainer, ImageContainer, Img} from "../Image/Image.styled";
 
 export default function Image () {
 
@@ -23,13 +23,13 @@ const momentId = (id) => {
 <PageContainer> 
 <Link to="/"><Button>atras</Button></Link>
     <ImageInfo>
-        <TextContainer>
-            <img src={moment.img_Url} alt={moment.title} />
-        </TextContainer>
         <ImageContainer>
-            <h1>{moment.title}</h1>
-            <h2>{moment.description}</h2>
+            <Img src={moment.img_Url} alt={moment.title} />
         </ImageContainer>
+        <TextContainer>
+            <h1>{moment.title}</h1>
+            <h2>{moment.descripcion}</h2>
+        </TextContainer>
     </ImageInfo>
 </PageContainer>)}
 
