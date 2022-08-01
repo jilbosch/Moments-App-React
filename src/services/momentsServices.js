@@ -23,5 +23,8 @@ export const momentsServices= {
       const moment = Axios.get(baseURL + "/moments/"+ id).then((res) => res.data);
         return moment;
     },
-    
+    getBySearch(search){
+        const searched = Axios.get(`${baseURL}/moments?search=${search}`).then((res)=> res.data);
+        return searched;
+    }
 }
