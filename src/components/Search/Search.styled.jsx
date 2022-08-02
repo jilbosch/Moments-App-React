@@ -9,10 +9,16 @@ export const ContainerMoments = styled.div`
 
 export const ImageBox = styled.div`
 display: flex;
-width: 10%;
-height:10%;
+width: 100%;
+height:100%;
 flex-direction: column-reverse;
-margin: 2% 1.66%;`
+`
 
+export const Img = styled.img`
+    width: 30%;
+    height: 30%;
+    padding: 5%;
+`
+export const SearchImg = styled. div``
 
 

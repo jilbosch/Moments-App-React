@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { momentsServices } from "../../services/momentsServices";
-import { ContainerMoments, ImageBox } from "./Search.styled";
+import { ContainerMoments, ImageBox, Img, SearchImg} from "./Search.styled";
 
 
 export const Search =()=>{
@@ -36,7 +36,7 @@ return(
   <input typeof="searchField" value={searchField}name="searchField"onChange={handleChange}/>
   <ContainerMoments>
   <ImageBox>
-{filteredMoments.map((moments, key)=>(<div><img src= {moments.img_Url}></img></div>))}
+{filteredMoments.map((moments, key)=>(<SearchImg><Img src= {moments.img_Url}></Img></SearchImg>))}
 </ImageBox>
 </ContainerMoments></> 
 )
