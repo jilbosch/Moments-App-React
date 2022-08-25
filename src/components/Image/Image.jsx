@@ -24,7 +24,7 @@ const momentId = (id) => {
 <Link to="/"><Button>atras</Button></Link>
     <ImageInfo>
         <ImageContainer>
-            <Img src={moment.img_Url} alt={moment.title} />
+            <Img src={moment.imgUrl} alt={moment.title} />
         </ImageContainer>
         <TextContainer>
             <h1>{moment.title}</h1>

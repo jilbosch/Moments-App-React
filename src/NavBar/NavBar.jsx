@@ -15,7 +15,9 @@ function NavBar() {
         </Link>
         <ContainerButtons>
             <Button1>Home</Button1>
+            <Link to="/SignIn">
           <Button1>Registration</Button1>
+          </Link>
         </ContainerButtons>
       
     </ContainerNav>

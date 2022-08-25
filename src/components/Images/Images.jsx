@@ -5,20 +5,7 @@ import { Link } from "react-router-dom";
 import { momentsServices } from "../../services/momentsServices";
 import { Form } from "../Form/Form";
 import {
-  ContainerMoments,
-  CreateButon,
-  Icon,
-  Icons,
-  ImageBox,
-  ImageImg,
-  ImageTitle,
-  ImgCont,
-  MiModal,
-  Modalcontenido,
-  MomentBtn,
-  TextContainer,
-  TitleDescripcion,
-} from "./Images.styled";
+  ContainerMoments,CreateButon,Icon,Icons,ImageBox,ImageImg,ImageTitle,ImgCont,MiModal,Modalcontenido,MomentBtn,TextContainer,TitleDescripcion,} from "./Images.styled";
 
 function Images() {
   const [moments, setMoments] = useState([])
@@ -98,7 +85,7 @@ function Images() {
         <ImageBox key={key}>
           <ImgCont>
               <Icon>< i className="fa-light fa-x"></i></Icon>
-              <ImageImg src={moment.img_Url} alt="imatge" />
+              <ImageImg src={moment.imgUrl} alt="imatge" />
               <MomentBtn>
               <Icons><i className="fa-solid fa-star"></i></Icons>
               <Link to={`/Image/${moment.id}`}>

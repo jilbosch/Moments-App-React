@@ -32,7 +32,7 @@ const resetInputsForm = (e) => {
     <form onSubmit={handleSubmit}>
     <input name="title" onChange={inputChange} type="text" id="title" value={newMoment.title} placeholder="Title" />
     <input name="descripcion" onChange={inputChange} type="text" id="descripcion" value={ newMoment.descripcion} placeholder="descripcion" /> 
-    <input name="img_Url" onChange={inputChange} type="url" id="img_Url" value={newMoment.img_Url} placeholder="Image" />
+    <input name="imgUrl" onChange={inputChange} type="url" id="imgUrl" value={newMoment.imgUrl} placeholder="Image" />
     {editMode?
     <button type="submit">Edit</button>:
     <button type="submit">Add</button>}
