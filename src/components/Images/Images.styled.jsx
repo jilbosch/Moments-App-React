@@ -84,6 +84,10 @@ export const Icons = styled.div`
 margin: 8px;
 text-decoration:none;
 color: white;
+font-size: 30px;
+@media (max-width:600px){
+font-size: 20px;
+}
 
 `;
 export  const Icon = styled.div `
